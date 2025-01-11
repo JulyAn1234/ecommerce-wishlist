@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "ecommerce-catalog-public", url = "http://localhost/ecommerce-catalog-public")
+@FeignClient(name = "ecommerce-catalog-public", url = "http://localhost/ecommerce-catalog")
 public interface CatalogClient {
     @GetMapping("/product/{productId}")
     Product getProductFromCatalog(@PathVariable("productId") String productId);
