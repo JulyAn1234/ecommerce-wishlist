@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "ecommerce-catalog-public", url = "http://ecommerce-catalog-public:8083")
+//@FeignClient(name = "ecommerce-catalog-public", url = "http://localhost:8083")
 public interface CatalogClient {
     @GetMapping("/product/{productId}")
     Product getProductFromCatalog(@PathVariable("productId") String productId);
