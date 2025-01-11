@@ -5,15 +5,17 @@ import com.ecommerceWishlist.ecommerceWishlist.model.entities.Wishlist;
 import com.ecommerceWishlist.ecommerceWishlist.model.repositories.WishlistRepository;
 import com.ecommerceWishlist.ecommerceWishlist.processes.WishlistEnricher;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class WishlistService {
 
-    private final WishlistEnricher wishlistEnricher;
+    private WishlistEnricher wishlistEnricher;
 
-    private final WishlistRepository wishlistRepository;
+    private WishlistRepository wishlistRepository;
     @Autowired
     WishlistService(WishlistEnricher wishlistEnricher, WishlistRepository wishlistRepository){
         this.wishlistEnricher = wishlistEnricher;

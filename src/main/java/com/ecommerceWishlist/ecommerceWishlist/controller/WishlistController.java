@@ -3,6 +3,7 @@ package com.ecommerceWishlist.ecommerceWishlist.controller;
 import com.ecommerceWishlist.ecommerceWishlist.model.enrichments.EnrichedWishlist;
 import com.ecommerceWishlist.ecommerceWishlist.model.entities.Wishlist;
 import com.ecommerceWishlist.ecommerceWishlist.service.WishlistService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,9 +16,9 @@ import java.util.Optional;
 @RestController
 public class WishlistController {
 
+    private final WishlistService wishlistService;
 
-    private WishlistService wishlistService;
-
+    @Autowired
     public WishlistController(WishlistService wishlistService) {
         this.wishlistService = wishlistService;
     }

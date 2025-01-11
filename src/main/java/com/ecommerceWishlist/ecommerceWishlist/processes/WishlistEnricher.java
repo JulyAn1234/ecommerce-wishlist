@@ -5,9 +5,12 @@ import com.ecommerceWishlist.ecommerceWishlist.model.enrichments.EnrichedWishlis
 import com.ecommerceWishlist.ecommerceWishlist.model.enrichments.Product;
 import com.ecommerceWishlist.ecommerceWishlist.model.entities.Wishlist;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Component
 public class WishlistEnricher {
 
     private CatalogClient catalogClient;

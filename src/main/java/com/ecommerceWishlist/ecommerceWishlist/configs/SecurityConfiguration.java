@@ -35,6 +35,7 @@ public class SecurityConfiguration {
                 .csrf(csrf -> csrf.disable()) // Use lambda to disable CSRF protection
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/**").permitAll()
+                        .requestMatchers("/wishlist/**").permitAll()
                         .requestMatchers("/auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
