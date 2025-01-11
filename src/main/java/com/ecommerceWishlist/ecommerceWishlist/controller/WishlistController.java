@@ -39,7 +39,7 @@ public class WishlistController {
         return ResponseEntity.ok(createdWishlist);
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/getWishlistByUser/{userId}")
     public ResponseEntity<List<EnrichedWishlist>> getAllWishlistsFromUser(@PathVariable("userId") String userId) {
         List<EnrichedWishlist> wishlistList = wishlistService.getWishlistsByUserId(userId);
 
@@ -49,7 +49,7 @@ public class WishlistController {
 
         return ResponseEntity.ok(wishlistList);
     }
-    @GetMapping("/{wishlistId}")
+    @GetMapping("/getWishlistById/{wishlistId}")
     public ResponseEntity<Optional<EnrichedWishlist>> getWishlist(@PathVariable("wishlistId") String wishlistId) {
         Optional<EnrichedWishlist> wishlistFound = wishlistService.getWishlist(wishlistId);
 
